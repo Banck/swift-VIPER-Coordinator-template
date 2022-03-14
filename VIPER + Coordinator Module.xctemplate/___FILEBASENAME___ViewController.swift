@@ -28,7 +28,7 @@ class ___VARIABLE_productName:identifier___ViewController: UIViewController {
 extension ___VARIABLE_productName:identifier___ViewController {
 
     private func configureUI() {
-        
+
     }
 }
 

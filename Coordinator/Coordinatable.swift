@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol Coordinatable: AnyObject {
-    func start()    
+    func start()
 }

@@ -12,17 +12,18 @@
 import Foundation
 
 final class ___VARIABLE_moduleName___Presenter {
-    
+
     // MARK: - Properties
     weak private var view: ___VARIABLE_moduleName___View?
     var interactor: ___VARIABLE_moduleName___InteractorInput?
     weak private var delegate: ___VARIABLE_moduleName___Delegate?
 
     // MARK: - Initialization and deinitialization
-    init(interface: ___VARIABLE_moduleName___View,
-         interactor: ___VARIABLE_moduleName___InteractorInput?,
-         delegate: ___VARIABLE_moduleName___Delegate?)
-    {
+    init(
+        interface: ___VARIABLE_moduleName___View,
+        interactor: ___VARIABLE_moduleName___InteractorInput?,
+        delegate: ___VARIABLE_moduleName___Delegate?
+    ) {
         self.view = interface
         self.interactor = interactor
         self.delegate = delegate
@@ -31,10 +32,10 @@ final class ___VARIABLE_moduleName___Presenter {
 
 // MARK: - ___VARIABLE_moduleName___PresenterInterface
 extension ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___PresenterInterface {
-    
+
 }
 
 // MARK: - ___VARIABLE_moduleName___InteractorOutput
 extension ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___InteractorOutput {
-    
+
 }

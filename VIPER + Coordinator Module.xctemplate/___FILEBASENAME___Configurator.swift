@@ -12,33 +12,33 @@
 import UIKit
 
 struct ___VARIABLE_moduleName___Configurator {
-    
+
     static func createModule(delegate: ___VARIABLE_moduleName___Delegate? = nil) -> UIViewController {
         let storyboard = UIStoryboard(name: "___VARIABLE_moduleName___",
                                       bundle: Bundle.main)
         guard let storyboardViewController = storyboard.instantiateInitialViewController() else {
             fatalError("___VARIABLE_moduleName___.storyboard has no initial view controller")
         }
-        
+
         let viewController: UIViewController?
         if let navController = storyboardViewController as? UINavigationController {
             viewController = navController.viewControllers.first
         } else {
             viewController = storyboardViewController
         }
-        
+
         guard let view = viewController as? ___VARIABLE_moduleName___ViewController else {
             fatalError("Failed to cast to ___VARIABLE_moduleName___ViewController")
         }
-        
+
         let interactor = ___VARIABLE_moduleName___Interactor()
         let presenter = ___VARIABLE_moduleName___Presenter(interface: view,
                                                            interactor: interactor,
                                                            delegate: delegate)
-        
+
         view.presenter = presenter
         interactor.presenter = presenter
-        
+
         return storyboardViewController
     }
 }

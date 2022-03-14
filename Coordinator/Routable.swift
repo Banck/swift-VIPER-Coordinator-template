@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol Routable {
-    
+
     func present(_ module: UIViewController, animated: Bool)
     func push(_ module: UIViewController, animated: Bool)
     func popModule(animated: Bool)
@@ -19,9 +19,9 @@ public protocol Routable {
 }
 
 final public class Router {
-    
+
     fileprivate weak var rootController: UINavigationController?
-        
+
     public init(rootController: UINavigationController) {
         self.rootController = rootController
     }
@@ -29,27 +29,27 @@ final public class Router {
 
 // MARK: - Routable
 extension Router: Routable {
-    
+
     public func present(_ module: UIViewController, animated: Bool) {
         rootController?.present(module, animated: animated)
     }
-        
+
     public func push(_ module: UIViewController, animated: Bool)  {
         rootController?.pushViewController(module, animated: animated)
     }
-    
+
     public func popModule(animated: Bool)  {
         rootController?.popViewController(animated: animated)
     }
-    
+
     public func dismissModule(animated: Bool) {
         rootController?.dismiss(animated: animated)
     }
-    
+
     public func setRootModule(_ module: UIViewController) {
         rootController?.setViewControllers([module], animated: false)
     }
-    
+
     public func popToRootModule(animated: Bool) {
         rootController?.popToRootViewController(animated: animated)
     }

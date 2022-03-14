@@ -12,9 +12,9 @@
 import Foundation
 
 final class ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___InteractorInput {
-    
+
     // MARK: - Properties
     weak var presenter: ___VARIABLE_moduleName___InteractorOutput?
-    
+
     // MARK: - ___VARIABLE_moduleName___InteractorInput
 }

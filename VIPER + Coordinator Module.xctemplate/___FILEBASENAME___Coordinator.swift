@@ -17,10 +17,13 @@ public protocol ___VARIABLE_moduleName___CoordinatorOutput: AnyObject {
 }
 
 public final class ___VARIABLE_moduleName___Coordinator: BaseCoordinator, ___VARIABLE_moduleName___CoordinatorOutput {
-    
+
     weak var delegate: ___VARIABLE_moduleName___CoordinatorOutput?
-    
-    public init(router: Router, delegate: ___VARIABLE_moduleName___CoordinatorOutput? = nil) {
+
+    public init(
+        router: Router,
+        delegate: ___VARIABLE_moduleName___CoordinatorOutput? = nil
+    ) {
         self.delegate = delegate
         super.init(router: router)
     }
@@ -28,7 +31,7 @@ public final class ___VARIABLE_moduleName___Coordinator: BaseCoordinator, ___VAR
 
 // MARK: - Coordinatable
 extension ___VARIABLE_moduleName___Coordinator: Coordinatable {
-  
+
     public func start() {
         let module = ___VARIABLE_moduleName___Configurator.createModule(delegate: self)
         router.setRootModule(module)
@@ -37,5 +40,5 @@ extension ___VARIABLE_moduleName___Coordinator: Coordinatable {
 
 // MARK: - ___VARIABLE_moduleName___Delegate
 extension ___VARIABLE_moduleName___Coordinator: ___VARIABLE_moduleName___Delegate {
-    
+
 }
