@@ -11,10 +11,11 @@
 
 import UIKit
 
-class ___VARIABLE_productName:identifier___ViewController: UIViewController {
+class ___VARIABLE_productName:identifier___ViewController: UIViewController, Coordinating {
 
     // MARK: - Properties
 	var presenter: ___VARIABLE_productName:identifier___PresenterInterface?
+    var coordinator: Coordinatable?
 
     // MARK: - Lifecycle -
 	override func viewDidLoad() {

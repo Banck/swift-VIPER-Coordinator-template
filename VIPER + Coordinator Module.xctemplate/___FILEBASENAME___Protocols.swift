@@ -12,7 +12,6 @@
 import Foundation
 
 public protocol ___VARIABLE_moduleName___Delegate: AnyObject {
-
 }
 
 // MARK: - Presenter

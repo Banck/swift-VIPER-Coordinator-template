@@ -12,7 +12,6 @@
 import UIKit
 
 public protocol ___VARIABLE_moduleName___CoordinatorOutput: AnyObject {
-
 //    func didSelectResult(_ result: Int)
 }
 
@@ -34,6 +33,7 @@ extension ___VARIABLE_moduleName___Coordinator: Coordinatable {
 
     public func start() {
         let module = ___VARIABLE_moduleName___Configurator.createModule(delegate: self)
+        (module as? Coordinating)?.coordinator = self
         router.setRootModule(module)
     }
 }
