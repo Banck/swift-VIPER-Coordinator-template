@@ -20,7 +20,7 @@ public final class ___VARIABLE_moduleName___Coordinator: BaseCoordinator, ___VAR
     weak var delegate: ___VARIABLE_moduleName___CoordinatorOutput?
 
     public init(
-        router: Router,
+        router: Routable,
         delegate: ___VARIABLE_moduleName___CoordinatorOutput? = nil
     ) {
         self.delegate = delegate
@@ -34,7 +34,7 @@ extension ___VARIABLE_moduleName___Coordinator: Coordinatable {
     public func start() {
         let module = ___VARIABLE_moduleName___Configurator.createModule(delegate: self)
         (module as? Coordinating)?.coordinator = self
-        router.setRootModule(module)
+        router.push(module, animated: true)
     }
 }
 
