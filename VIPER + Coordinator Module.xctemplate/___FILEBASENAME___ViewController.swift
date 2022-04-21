@@ -10,6 +10,7 @@
 //
 
 import UIKit
+import uCore
 
 class ___VARIABLE_productName:identifier___ViewController: UIViewController, Coordinating {
 

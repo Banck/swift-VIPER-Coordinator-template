@@ -10,7 +10,7 @@
         <!--product Name:identifier View Controller-->
         <scene sceneID="fZK-bf-fho">
             <objects>
-                <viewController id="SoS-fj-UgM" customClass="___VARIABLE_productName:identifier___ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SoS-fj-UgM" customClass="___VARIABLE_productName:identifier___ViewController" customModule="u___VARIABLE_productName:identifier___" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z3h-FP-F3F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

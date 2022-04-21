@@ -10,20 +10,26 @@
 //
 
 import UIKit
+import uCore
 
-public protocol ___VARIABLE_moduleName___CoordinatorOutput: AnyObject {
-//    func didSelectResult(_ result: Int)
+#warning("Move to ___VARIABLE_moduleName___Interfaces target")
+// MARK: - ___VARIABLE_moduleName___CoordinatorOutput
+public struct ___VARIABLE_moduleName___CoordinatorOutput {
+
+    //    func didSelectResult: (_ result: Int) -> Void
 }
 
-public final class ___VARIABLE_moduleName___Coordinator: BaseCoordinator, ___VARIABLE_moduleName___CoordinatorOutput {
+// MARK: - ___VARIABLE_moduleName___Coordinator
+public final class ___VARIABLE_moduleName___Coordinator: BaseCoordinator {
 
-    weak var delegate: ___VARIABLE_moduleName___CoordinatorOutput?
+    private let output: ___VARIABLE_moduleName___CoordinatorOutput?
+    private weak var offersInput: ___VARIABLE_moduleName___ModuleInput?
 
     public init(
         router: Routable,
-        delegate: ___VARIABLE_moduleName___CoordinatorOutput? = nil
+        output: ___VARIABLE_moduleName___CoordinatorOutput? = nil
     ) {
-        self.delegate = delegate
+        self.output = output
         super.init(router: router)
     }
 }
@@ -32,13 +38,9 @@ public final class ___VARIABLE_moduleName___Coordinator: BaseCoordinator, ___VAR
 extension ___VARIABLE_moduleName___Coordinator: Coordinatable {
 
     public func start() {
-        let module = ___VARIABLE_moduleName___Configurator.createModule(delegate: self)
-        (module as? Coordinating)?.coordinator = self
-        router.push(module, animated: true)
+        let module = ___VARIABLE_moduleName___Configurator.createModule(output: nil)
+        module.view.coordinator = self
+        router.push(module.view, animated: true)
+        offersInput = module.input
     }
-}
-
-// MARK: - ___VARIABLE_moduleName___Delegate
-extension ___VARIABLE_moduleName___Coordinator: ___VARIABLE_moduleName___Delegate {
-
 }

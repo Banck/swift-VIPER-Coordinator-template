@@ -16,17 +16,17 @@ final class ___VARIABLE_moduleName___Presenter {
     // MARK: - Properties
     weak private var view: ___VARIABLE_moduleName___View?
     var interactor: ___VARIABLE_moduleName___InteractorInput?
-    weak private var delegate: ___VARIABLE_moduleName___Delegate?
+    private var output: ___VARIABLE_moduleName___ModuleOutput?
 
     // MARK: - Initialization and deinitialization
     init(
         interface: ___VARIABLE_moduleName___View,
         interactor: ___VARIABLE_moduleName___InteractorInput?,
-        delegate: ___VARIABLE_moduleName___Delegate?
+        output: ___VARIABLE_moduleName___ModuleOutput?
     ) {
         self.view = interface
         self.interactor = interactor
-        self.delegate = delegate
+        self.output = output
     }
 }
 
@@ -39,3 +39,6 @@ extension ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___Presenter
 extension ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___InteractorOutput {
 
 }
+
+// MARK: - ___VARIABLE_moduleName___ModuleInput
+extension ___VARIABLE_moduleName___Presenter: ___VARIABLE_moduleName___ModuleInput { }

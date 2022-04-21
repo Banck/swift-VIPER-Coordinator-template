@@ -11,7 +11,13 @@
 
 import Foundation
 
-public protocol ___VARIABLE_moduleName___Delegate: AnyObject {
+// MARK: - ___VARIABLE_moduleName___ModuleInput
+protocol ___VARIABLE_moduleName___ModuleInput: AnyObject { }
+
+// MARK: - ___VARIABLE_moduleName___ModuleOutput
+struct ___VARIABLE_moduleName___ModuleOutput {
+    
+//    let didSelectSearchResult: (_ searchResult: String) -> Void
 }
 
 // MARK: - Presenter
