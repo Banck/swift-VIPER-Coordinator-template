@@ -28,9 +28,11 @@ struct ___VARIABLE_moduleName___Configurator {
         }
 
         let interactor = ___VARIABLE_moduleName___Interactor()
-        let presenter = ___VARIABLE_moduleName___Presenter(interface: view,
-                                                           interactor: interactor,
-                                                           output: output)
+        let presenter = ___VARIABLE_moduleName___Presenter(
+            interface: view,
+            interactor: interactor,
+            output: output
+        )
 
         view.presenter = presenter
         interactor.presenter = presenter
