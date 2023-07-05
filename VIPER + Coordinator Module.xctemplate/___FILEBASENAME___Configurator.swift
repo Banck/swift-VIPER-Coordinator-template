@@ -17,15 +17,7 @@ struct ___VARIABLE_moduleName___Configurator {
     static func createModule(
         output: ___VARIABLE_moduleName___ModuleOutput? = nil
     ) -> (view: UIViewController & Coordinating, input: ___VARIABLE_moduleName___ModuleInput) {
-        let storyboard = UIStoryboard(name: "___VARIABLE_moduleName___", bundle: Bundle.module)
-
-        guard let viewController = storyboard.instantiateInitialViewController() else {
-            fatalError("___VARIABLE_moduleName___.storyboard has no initial view controller")
-        }
-
-        guard let view = viewController as? ___VARIABLE_moduleName___ViewController else {
-            fatalError("Failed to cast to ___VARIABLE_moduleName___ViewController")
-        }
+        let view = ___VARIABLE_moduleName___ViewController()
 
         let interactor = ___VARIABLE_moduleName___Interactor()
         let presenter = ___VARIABLE_moduleName___Presenter(

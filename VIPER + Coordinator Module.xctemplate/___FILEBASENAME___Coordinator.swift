@@ -23,7 +23,7 @@ public struct ___VARIABLE_moduleName___CoordinatorOutput {
 public final class ___VARIABLE_moduleName___Coordinator: BaseCoordinator {
 
     private let output: ___VARIABLE_moduleName___CoordinatorOutput?
-    private weak var offersInput: ___VARIABLE_moduleName___ModuleInput?
+    private weak var input: ___VARIABLE_moduleName___ModuleInput?
 
     public init(
         router: Routable,
@@ -41,6 +41,6 @@ extension ___VARIABLE_moduleName___Coordinator: Coordinatable {
         let module = ___VARIABLE_moduleName___Configurator.createModule(output: nil)
         module.view.coordinator = self
         router.push(module.view, animated: true)
-        offersInput = module.input
+        input = module.input
     }
 }

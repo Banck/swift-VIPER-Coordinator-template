@@ -46,20 +46,6 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_moduleName:identifier___</string>
-			<key>Description</key>
-			<string>The storyboard name</string>
-			<key>Identifier</key>
-			<string>storyboardName</string>
-			<key>Name</key>
-			<string>Storyboard Name:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
 			<string>___VARIABLE_moduleName:identifier___Configurator</string>
 			<key>Description</key>
 			<string>The configurator name</string>
@@ -109,20 +95,6 @@
 			<string>interactorName</string>
 			<key>Name</key>
 			<string>Interactor Name:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>___VARIABLE_moduleName:identifier___Coordinator</string>
-			<key>Description</key>
-			<string>The coordinator file name</string>
-			<key>Identifier</key>
-			<string>coordinatorName</string>
-			<key>Name</key>
-			<string>Coordinator Name:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>

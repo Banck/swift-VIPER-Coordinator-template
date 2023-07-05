@@ -15,13 +15,13 @@ final class ___VARIABLE_moduleName___Presenter {
 
     // MARK: - Properties
     weak private var view: ___VARIABLE_moduleName___View?
-    var interactor: ___VARIABLE_moduleName___InteractorInput?
+    var interactor: ___VARIABLE_moduleName___InteractorInput
     private var output: ___VARIABLE_moduleName___ModuleOutput?
 
     // MARK: - Initialization and deinitialization
     init(
         interface: ___VARIABLE_moduleName___View,
-        interactor: ___VARIABLE_moduleName___InteractorInput?,
+        interactor: ___VARIABLE_moduleName___InteractorInput,
         output: ___VARIABLE_moduleName___ModuleOutput?
     ) {
         self.view = interface
